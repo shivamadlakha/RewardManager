@@ -7,10 +7,15 @@ import java.util.UUID;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "POINTS")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Points {
 
 	@Id
@@ -23,47 +28,5 @@ public class Points {
 	private Customer customer;
 	@OneToOne
 	private Transactions transactions;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public int getRewards() {
-		return rewards;
-	}
-	public void setRewards(int rewards) {
-		this.rewards = rewards;
-	}
-	public LocalDate getPoint_date() {
-		return point_date;
-	}
-	public void setPoint_date(LocalDate point_date) {
-		this.point_date = point_date;
-	}
-	public Customer getCustomer() {
-		return customer;
-	}
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-	public Transactions getTransactions() {
-		return transactions;
-	}
-	public void setTransactions(Transactions transactions) {
-		this.transactions = transactions;
-	}
-	public Points() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Points(Integer id, int rewards, LocalDate point_date, Customer customer, Transactions transactions) {
-		super();
-		this.id = id;
-		this.rewards = rewards;
-		this.point_date = point_date;
-		this.customer = customer;
-		this.transactions = transactions;
-	}
 	
 }
