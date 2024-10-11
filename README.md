@@ -1,8 +1,6 @@
 # RewardManager
-Allocating Rewards to customers based on there transactional amount
- Extensions used- >
- /api/reward/txn  --> this will allocate the rewards to all the transactions and will return all transactions
- /api/reward/customer/1  --> this will fetch overall rewards of customer id 1 along with transactions details
- /api/reward/customer/2?months=2  --> this will fetch total rewards of customer 2 specific to second last month with transaction details
- Any invlaid customer id or Invalid month number having No data present in database will throw exception and is being handled
- Any other Exception that could occur is also handled globally
+A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.  
+  
+A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent between $50 and $100 in each transaction. 
+(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points). 
+
