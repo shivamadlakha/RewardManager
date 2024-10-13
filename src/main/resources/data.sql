@@ -21,7 +21,10 @@ Insert into Customer values(1,'Raman');
 Insert into Customer values(2,'Shivam');
 Insert into Customer values(3,'Sagar');
 
-Insert into Transaction values(5001,110,'2024-09-12','amazon','n',,1);
-Insert into Transaction values(5002,60,'2024-08-12','flipkart','n',1);
-Insert into Transaction values(5003,30,'2024-09-12','zepto','n',1);
+Insert into Transaction values(5001, 110, '2024-09-12', 'amazon', 'n', 1);
+Insert into Transaction values(5002, 60, '2024-08-12', 'flipkart', 'n', 1);
+Insert into Transaction values(5003, 30, '2024-09-12', 'zepto', 'n', 1);
+
+Insert into Transaction values(5004, 230, '2024-07-12', 'amazon', 'n', 2);
+Insert into Transaction values(5005, 30, '2024-07-12', 'flipkart', 'n', 2);
 
