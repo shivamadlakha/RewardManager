@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.customer.points.rewards.entity.Points;
 import com.customer.points.rewards.entity.Transactions;
+import com.customer.points.rewards.exceptions.DataNotFoundException;
 import com.customer.points.rewards.repository.PointRepository;
 import com.customer.points.rewards.repository.TransactionRepository;
 
@@ -33,7 +34,7 @@ public class RewardingLogic {
 	 }
 	 
 	 public void fillRewards(Transactions transaction) {
-		 if(transaction.getRewardFlag()==null) {
+		 if(transaction.getRewardFlag().equalsIgnoreCase("n")) {
 			 int reward=calculatePoints(transaction.getAmount());
 			 Points point=new Points();
 			 point.setRewards(reward); 
@@ -45,7 +46,7 @@ public class RewardingLogic {
 			 transactionRepository.save(transaction);
 		 }
 		 else {
-			 
+			 throw new DataNotFoundException("Already Rewarded","No more transactions present");
 		 }
 		 
 		 }
